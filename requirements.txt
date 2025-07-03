@@ -1,6 +1,8 @@
 requests
 pandas
+sqlalchemy
 python-dotenv
 snowflake-connector-python
+snowflake-sqlalchemy
 schedule
 streamlit   # Optional, only needed for dashboard
