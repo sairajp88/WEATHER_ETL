@@ -1,22 +1,22 @@
-name: Hourly ETL to Snowflake
+name: ⏰ Hourly ETL to Snowflake
 
 on:
   schedule:
     - cron: '0 * * * *'  # Every hour
-  workflow_dispatch:
+  workflow_dispatch:     # Allow manual runs from GitHub UI
 
 jobs:
   run_etl:
     runs-on: ubuntu-latest
 
     steps:
-      - name: ⬇️ Checkout code
+      - name: 🧾 Checkout Repository
         uses: actions/checkout@v3
 
       - name: 🐍 Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.11'
+          python-version: 3.11
 
       - name: 📦 Install dependencies
         run: |
@@ -31,6 +31,7 @@ jobs:
           echo "SNOWFLAKE_WAREHOUSE=${{ secrets.SNOWFLAKE_WAREHOUSE }}" >> $GITHUB_ENV
           echo "SNOWFLAKE_DATABASE=${{ secrets.SNOWFLAKE_DATABASE }}" >> $GITHUB_ENV
           echo "SNOWFLAKE_SCHEMA=${{ secrets.SNOWFLAKE_SCHEMA }}" >> $GITHUB_ENV
+          echo "OWM_API_KEY=${{ secrets.OWM_API_KEY }}" >> $GITHUB_ENV  # ✅ REQUIRED!
 
-      - name: ▶️ Run ETL pipeline
+      - name: 🚀 Run ETL Pipeline
         run: python main.py
