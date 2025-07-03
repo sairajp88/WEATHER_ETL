@@ -1,0 +1,6 @@
+requests
+pandas
+python-dotenv
+snowflake-connector-python
+schedule
+streamlit   # Optional, only needed for dashboard
