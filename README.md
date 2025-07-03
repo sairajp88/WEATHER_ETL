@@ -8,7 +8,7 @@ A full-stack data engineering project that extracts real-time weather data from 
 
 ### 🚀 [Live Dashboard ↗](https://weather-anly-etl.streamlit.app/)
 
-![Weather Dashboard Screenshot](https://github.com/sairajp88/WEATHER_ETL/assets/412382a4-d0f1-4085-a014-7552a544c963)
+![Screenshot 2025-07-03 120851](https://github.com/user-attachments/assets/cba33e71-3692-4801-b115-e643fa57cb30)
 
 ---
 
